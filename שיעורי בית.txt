@@ -1,0 +1,60 @@
+package java1;
+import java.util.Scanner; 
+public class java7{
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+	    System.out.println("enter a number");
+	    String num = input.next();
+	    System.out.println(polindrom(num));
+        int dec = input.nextInt();
+        decToBin(dec);
+		pow(3,8);
+	}
+	
+	public static int pow(int a, int b) {
+		
+		if(a == 1) {
+			return 1;
+		}
+		if(b == 0) {
+			if(a == 0) {
+				return -1;
+			}
+			System.out.println(a + "^" + b);
+			return 1;
+		}
+		System.out.println(a + "^" + b);
+		return pow(a, b - 1) * a;
+	}
+//תרגיל 1
+	
+	
+	
+	public static boolean polindrom(String num) {
+		if(num.length() <= 1) return true;
+		else {
+			if(num.charAt(0) != num.charAt(num.length() - 1)) return false;
+			else {
+				return polindrom(num.substring(1, num.length() - 1));
+			}
+		}
+	}
+	
+//תרגיל 2	
+
+	 public static void decToBin(int dec) {
+	        if(dec < 2) System.out.println(dec);
+            else {
+	                  decToBin(dec / 2);
+	                  System.out.println(dec % 2);
+                 }
+             }
+         }
+//תרגיל 3
+
+
+
+         
+         
+         
+
